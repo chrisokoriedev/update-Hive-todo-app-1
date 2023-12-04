@@ -99,6 +99,7 @@ class _AddTodoState extends State<AddTodo> {
                                       content: Text('empty fields')));
                               return '';
                             }
+                            return null;
                           },
                           onChanged: (value) {
                             setState(() {
@@ -137,6 +138,7 @@ class _AddTodoState extends State<AddTodo> {
                                       content: Text('empty fields')));
                               return '';
                             }
+                            return null;
                           },
                           onChanged: (value) {
                             setState(() {
