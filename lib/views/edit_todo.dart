@@ -55,8 +55,10 @@ class _EditTodoState extends State<EditTodo> {
                         onPressed: () {
                           if (title.isNotEmpty && description.isNotEmpty) {
                             Box<Todo> todoBox = Hive.box<Todo>('todoBox');
-                            todoBox.add(
-                                Todo(title: title, description: description,));
+                            todoBox.add(Todo(
+                              title: title,
+                              description: description,
+                            ));
                           } else if (title == '' && description == '') {
                             Get.back();
                           }
@@ -92,15 +94,16 @@ class _EditTodoState extends State<EditTodo> {
                                   color: Colors.white70, fontSize: 25),
                               border: OutlineInputBorder(
                                   borderSide:
-                                  BorderSide(color: Colors.transparent)),
+                                      BorderSide(color: Colors.transparent)),
                               enabledBorder: OutlineInputBorder(
                                   borderSide:
-                                  BorderSide(color: Colors.transparent)),
+                                      BorderSide(color: Colors.transparent)),
                               focusedBorder: OutlineInputBorder(
                                   borderSide:
-                                  BorderSide(color: Colors.transparent))),
+                                      BorderSide(color: Colors.transparent))),
                           validator: (text) {
                             if (text!.isEmpty) {}
+                            return null;
                           },
                           onChanged: (value) {
                             setState(() {
@@ -122,16 +125,16 @@ class _EditTodoState extends State<EditTodo> {
                                   color: Colors.white70, fontSize: 25),
                               border: OutlineInputBorder(
                                   borderSide:
-                                  BorderSide(color: Colors.transparent)),
+                                      BorderSide(color: Colors.transparent)),
                               enabledBorder: OutlineInputBorder(
                                   borderSide:
-                                  BorderSide(color: Colors.transparent)),
+                                      BorderSide(color: Colors.transparent)),
                               errorBorder: OutlineInputBorder(
                                   borderSide:
-                                  BorderSide(color: Colors.transparent)),
+                                      BorderSide(color: Colors.transparent)),
                               focusedBorder: OutlineInputBorder(
                                   borderSide:
-                                  BorderSide(color: Colors.transparent))),
+                                      BorderSide(color: Colors.transparent))),
                           onChanged: (value) {
                             setState(() {
                               description = value;
